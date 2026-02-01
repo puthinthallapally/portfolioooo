@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('bg.jpg') center/cover no-repeat fixed;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+#name {
+  font-size: 4rem;
+  font-weight: 800;
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* INFO PANEL */
+.info {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.1);
+  padding: 20px 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  backdrop-filter: blur(12px);
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* MUSIC BUTTON */
+#musicBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
